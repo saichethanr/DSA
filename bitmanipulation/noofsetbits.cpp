@@ -22,6 +22,9 @@ int noofsetbits_approach2(int n){
         }
         n=n>>1;
     }
+    if(n==1){
+        cnt++;
+    }
     return cnt;
 }
 
@@ -31,11 +34,12 @@ int noofsetbits_approach3(int n){
         n = n&(n-1);
         cnt++;
     }
+   
     return cnt;
 }
 
 
 int main(){
-    cout << noofsetbits_approach3(13) << endl;
+    cout << noofsetbits_approach2(8) << endl;
     return 0;
 }
