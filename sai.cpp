@@ -1,6 +1,6 @@
 #include <iostream>
-using namsespace std;
+using namespace std;
 int main(){
-cout<<"hello world"<<endl;
-reurn 0; 
+   int ans = 0^4;
+  cout<<ans<<endl;
 }
