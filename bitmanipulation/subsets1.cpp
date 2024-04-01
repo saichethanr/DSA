@@ -19,6 +19,12 @@ vector<vector<int>> subsets(vector<int>& nums) {
 
 
 int main(){
-    vector <int> nums = {1,2,3};
+    vector <int> nums = {1,2,2};
     vector<vector<int>>p = subsets(nums);
+    for(int i=0;i<p.size();i++){
+        for(int j=0;j<p[i].size();j++){
+            cout<<p[i][j];
+        }
+        cout<<endl;
+    }
 }
