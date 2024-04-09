@@ -57,6 +57,41 @@ int robtab(vector <int> nums,int n){
     }
   return dp[n];
 }
+
+int robtab2(vector <int> nums,int n){
+      vector <int> dp(n+1,0);
+
+      dp[0]=nums[0];
+
+      for(int i=1;i<=n;i++){
+           int include =0;
+           
+    // include and go left 2 index
+    if(i-2>=0){
+        include  = dp[i-2] + nums[i];
+    }
+    //exclude and go left 1 index
+    int exclude = dp[i-1] + 0;
+    dp[i] = max(include,exclude);
+    }
+  return dp[n];
+}
+
+int spaceopti(vector <int> nums,int n){
+    int prev =  nums[0];
+    int prev2 = 0;
+    for(int i=0;i<n;i++){
+        int take = nums[i];
+        if(i>1){
+            take += prev2;
+        }
+        int donttake = 0 + prev;
+        int curi = max(take,donttake);
+        prev2 = prev;
+        prev = curi;
+    }
+    return prev;
+}
 int main(){
     vector <int> nums = {1,2,3,1};
     int n=nums.size()-1;
