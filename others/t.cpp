@@ -23,7 +23,7 @@ int solvesai(vector<int>& nums) {
 
 int main() {
     vector<int> array = {25, 10, 20};
-    int result = minCostToReduceArray(array);
+    int result = solvesai(array);
     cout << "Minimum possible cost to reduce the array: " << result << endl;
     return 0;
 }
