@@ -1,6 +1,8 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+// number of operations required to substract equal amounts and make the array zero is the total no of positive unique 
+// elements in the array
 class Solution {
 public:
     int minimumOperations(vector<int>& nums) {
