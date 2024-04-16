@@ -1,6 +1,10 @@
 #include<bits/stdc++.h> 
 #include <string>
 using namespace std;
+// Given an integer n, return a list of all simplified fractions between 0 and 1 (exclusive) 
+// such that the denominator is less-than-or-equal-to n. You can return the answer in any order.
+
+
 class Solution {
 public:
     vector<string> simplifiedFractions(int n) {
