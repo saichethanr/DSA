@@ -51,7 +51,6 @@ Node * buildtree(){
                 q.push(temp->right);
             }
             }
-        
         }
 
     }
