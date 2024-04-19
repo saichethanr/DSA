@@ -10,6 +10,8 @@ using namespace std;
       ListNode(int x) : val(x), next(nullptr) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
+
+  
  ListNode *detectCycle(ListNode *head) {
                unordered_map<ListNode*,int>mpp;
         ListNode *temp=head;
