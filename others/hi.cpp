@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-float a =5.51;
-int b = static_cast<int> (a);
-cout<<b;
+int a  = 1||0;
+int t= 1==1;
+cout<<t<<endl;
 }
