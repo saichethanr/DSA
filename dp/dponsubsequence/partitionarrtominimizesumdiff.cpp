@@ -35,9 +35,6 @@ public:
                 mindiff = min(mindiff,abs((sum-i)-i));
              }
         }
-
-        
-       
         return mindiff;
     }
 };
