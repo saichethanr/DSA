@@ -19,7 +19,6 @@ int solve(int idx,vector <int> &nums,int target){
 }
 
 int solve_memo(int idx,vector <int> &nums,int target,vector<vector<int>>&dp){
-    
      if(idx==0){
         if(target==0 && nums[0]==0){
             return 2;
