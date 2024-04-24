@@ -19,11 +19,15 @@ int solve(int idx,vector <int> &nums,int target){
 }
 
 int solve_memo(int idx,vector <int> &nums,int target,vector<vector<int>>&dp){
-     if(target==0){
-        return 1;
-     }
+    
      if(idx==0){
-        return (nums[idx]==target);
+        if(target==0 && nums[0]==0){
+            return 2;
+        }
+        if(target==0 || nums[idx]==target){
+            return 1;
+        }
+        return 0;
      }
     
 	if(dp[idx][target]!=-1){
