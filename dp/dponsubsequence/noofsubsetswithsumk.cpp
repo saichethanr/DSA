@@ -46,11 +46,14 @@ int solve_memo(int idx,vector <int> &nums,int target,vector<vector<int>>&dp){
 int solve_tab(int idx,vector <int> &arr,int k,vector<vector<int>>&dp){
     int n = arr.size();
    vector<vector<int>>dp(n,vector<int>(k+1,0));
-   for(int i=0;i<n;i++){
-       dp[i][0] = 1;
+   if(arr[0]==0){
+    dp[0][0]=2;
+   }  
+   else{
+    dp[0][0]=1;
    }
-   
-   if(arr[0]<=k){
+
+   if(arr[0]!=0 && arr[0]<=k){
           dp[0][arr[0]] = 1;
    }
 
