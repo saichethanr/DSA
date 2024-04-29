@@ -1,9 +1,6 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-
-
-
 int solve(int idx,int w,vector<int> &val,vector<int> &wt){
     if(idx==0){
  
