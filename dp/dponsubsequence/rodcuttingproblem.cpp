@@ -43,8 +43,6 @@ int solve(int idx,int n,vector<int> &price,  vector<vector<int>>&dp){
     for(int i=0;i<=n;i++){
         dp[0][i] = i*price[0];
     }
-    
-
     for(int i=1;i<n;i++){
         for(int j=0;j<=n;j++){
             int notake = dp[i-1][j];
