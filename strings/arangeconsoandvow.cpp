@@ -39,8 +39,8 @@ class Solution {
            }
            temp=temp->next;
        }
-     t.insert(t.end(), vow.begin(), vow.end());
-         t.insert(t.end(), conso.begin(), conso.end());
+        t.insert(t.end(), vow.begin(), vow.end());
+        t.insert(t.end(), conso.begin(), conso.end());
 
        temp = head;
        int i =0;
