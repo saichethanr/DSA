@@ -1,5 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std;
+
 class Solution {
 public:
     pair<long long, long long> getMinMax(long long a[], int n) {
