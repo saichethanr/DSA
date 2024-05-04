@@ -37,9 +37,11 @@ using namespace std;
         // as we cannot store dp[-1] which is not valid hence it important to shift the index 0 represents -ve and 
         // form 1 its considered for dp
          vector<vector<int>>dp(n1+1,vector<int>(n2+1,0));
+         //when i ==0 j may be anything
          for(int j=0;j<=n2;j++){
             dp[0][j] = 0;
          }
+        //  when j =0 i may be anything
          for(int i=0;i<=n1;i++){
             dp[i][0] =0;
          }
