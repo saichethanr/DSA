@@ -34,6 +34,8 @@ using namespace std;
        int longestCommonSubsequence(string s1, string s2) {
         int n1  =  s1.size();
         int n2 = s2.size();
+        // as we cannot store dp[-1] which is not valid hence it important to shift the index 0 represents -ve and 
+        // form 1 its considered for dp
          vector<vector<int>>dp(n1+1,vector<int>(n2+1,0));
          for(int j=0;j<=n2;j++){
             dp[0][j] = 0;
