@@ -1,7 +1,9 @@
  #include<bits/stdc++.h> 
 using namespace std;
 
-    
+    // similar to the longest common subsequence but there we used to conisder all the cases even 
+    // though if the characters wouldnt match but if the character wooudnt match we will break
+    // the chain and do a fresh begining
     int longestCommonSubstr (string s1, string s2, int n, int m)
     {
         
