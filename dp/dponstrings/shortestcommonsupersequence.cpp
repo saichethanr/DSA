@@ -27,7 +27,7 @@ public:
         }
 
         int len = dp[n1][n2];
-
+        // constructing the string after finding the longest common subsequence
         string ans = "";
      
         int i=n1;
