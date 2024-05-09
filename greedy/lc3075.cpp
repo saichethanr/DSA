@@ -30,3 +30,20 @@ public:
         return sum;
     }
 };
+
+//correct answer
+class Solution {
+public:
+    long long maximumHappinessSum(vector<int>& v, int k) {
+       sort(v.begin(),v.end());
+       reverse(v.begin(),v.end());
+       int cnt=1;
+       long long int sum=0;
+       int i=0;
+       while(k--){
+          v[i] = max(v[i]-i,0);
+          sum+=v[i++];
+       } 
+       return sum;
+    }
+};
