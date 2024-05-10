@@ -22,12 +22,10 @@ int main(){
     cin>>w;
     int n;
     cin>>n;
-
     vector <int> rem(n);
     for(int i=0;i<n;i++){ 
         cin>>rem[i];
     }
-
     int ans = solve(w,rem);
     cout<<ans;
     return 0;
