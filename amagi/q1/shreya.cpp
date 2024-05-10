@@ -15,6 +15,9 @@ int solve(int w,vector<int>&rem){
             break;
         }
     }
+    if(reqwork<w){
+        return -1;
+    }
     return ans;
 }
 int main(){
