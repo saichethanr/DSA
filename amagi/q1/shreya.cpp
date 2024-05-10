@@ -7,7 +7,7 @@ int solve(int w,vector<int>&rem){
     int reqwork=0;
     for(int i=0;i<rem.size();i++){
         if(rem[i]==w){
-            continue;
+            return -1;
         }
         reqwork+=abs(rem[i]-w);
         ans++;
