@@ -47,6 +47,8 @@ using namespace std;
         for(int i=1;i<=n1;i++){
             for(int j=1;j<=n2;j++){
                 if(s[i-1]==t[j-1]){
+                    //if it matches and you would like to take the char into sequence
+                    //it it matches and you wish to not take and look for some other index with same char 
                     dp[i][j] = dp[i-1][j-1]+ dp[i-1][j];
                 }
                 else{
