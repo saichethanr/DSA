@@ -80,3 +80,53 @@ using namespace std;
 
         return false;
     }
+
+
+
+
+    class Solution {
+public:
+  
+    bool isMatch(string s, string p) {
+        int n1=p.size();
+        int n2 = s.size();
+        vector<vector<bool>>dp(n1+1,vector<bool>(n2+1,false));
+        dp[0][0] =true;
+        for(int j=1;j<=n2;j++){
+            dp[0][j] = false;
+        }
+ 
+        for(int i=1;i<=n1;i++){
+            bool check = true;
+            for(int k=1;k<=i;k++){
+                if(p[k-1]!='*'){
+                    check=false;
+                    break;
+                }
+            }
+            dp[i][0] =check;
+        }
+
+
+        for(int i=1;i<=n1;i++){
+            for(int j=1;j<=n2;j++){
+                //if the pattern contsins ? it can be matched to any char in the string 
+                if(p[i-1]==s[j-1] || p[i-1]=='?'){
+                    dp[i][j] = dp[i-1][j-1];
+                }
+                else if(p[i-1]=='*'){
+                    //if the pattern contaains * it can be matched to any sequence 
+                //hence the * can either be considered as null 
+                //or the str can be matched to a character
+                    dp[i][j] = dp[i-1][j] | dp[i][j-1];
+                } 
+                else{
+                    dp[i][j] = false;
+                }
+                 
+            }
+        }
+        return dp[n1][n2];
+    }
+};
+
