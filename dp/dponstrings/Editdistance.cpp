@@ -23,9 +23,9 @@ using namespace std;
         if(s1[i]==s2[j]){
            return 0 + solve(i-1,j-1,s1,s2);
         }
-        int insert = 1 + solve(i,j-1,s1,s2);
-        int replace =1 +  solve(i-1,j-1,s1,s2);
-        int del  = 1 + solve(i-1,j,s1,s2);
+        int insert = 1 + solve(i,j-1,s1,s2); //hypothetical insertion in the first string 
+        int replace =1 +  solve(i-1,j-1,s1,s2); ////hypothetical insertion in the first string 
+        int del  = 1 + solve(i-1,j,s1,s2);//deletion done in the first string 
 
         return min(insert,min(replace,del));
     }
