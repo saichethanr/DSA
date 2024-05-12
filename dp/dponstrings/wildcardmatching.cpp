@@ -36,3 +36,47 @@ using namespace std;
 
         return false;
     }
+
+
+
+        bool solve(int i,int j,string s,string p, vector<vector<int>>&dp){
+        //if both are exausted return true
+        if(i<0 && j<0){
+            return true;
+        }
+        //if pattern is exausted and the string is left return false as there is no other option
+        if(i<0 && j>=0){
+            return false;
+        }
+        
+        if(j<0 && i>=0){
+            //is the string is empty and the pattern remains
+            //then  the pattern should only contain all stars to be able to match to the empty string 
+            bool check = true;
+            for(int k=i;k>=0;k--){
+                if(p[k]!='*'){
+                    check = false;
+                    break;
+                }
+            }
+            return check;
+        }
+        if(dp[i][j]!=-1){
+            return dp[i][j];
+        }
+
+        //if the pattern contsins ? it can be matched to any char in the string 
+        if(p[i]==s[j] || p[i]=='?'){
+           dp[i][j] = solve(i-1,j-1,s,p,dp);
+           return dp[i][j];
+        }
+        //if the pattern contaains * it can be matched to any sequence 
+        //hence the * can either be considered as null 
+        //or the str can be matched to a character
+        if(p[i]=='*'){
+            dp[i][j] = solve(i-1,j,s,p,dp) | solve(i,j-1,s,p,dp);
+            return dp[i][j];
+        } 
+
+        return false;
+    }
