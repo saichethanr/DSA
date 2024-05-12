@@ -56,6 +56,41 @@ using namespace std;
         int replace =1 +  solve(i-1,j-1,s1,s2,dp);
         int del  = 1 + solve(i-1,j,s1,s2,dp);
 
-       dp[i][j] =  min(insert,min(replace,del));
-       return dp[i][j];;
+        dp[i][j] =  min(insert,min(replace,del));
+        return dp[i][j];;
+    }
+
+
+      int minDistance(string s1, string s2) {
+        int n1 = s1.size();
+        int n2 = s2.size();
+        //conveert the problem inot 1 based indexing 
+        vector<vector<int>>dp(n1+1,vector<int>(n2+1,0));
+        //as its 1 based indexing its just initialized to i and not i+1
+        for(int i=1;i<=n1;i++){
+            dp[i][0] = i;
+        }
+
+        for(int j=0;j<=n2;j++){
+            dp[0][j] = j;
+        }
+
+        for(int i=1;i<=n1;i++){
+            for(int j=1;j<=n2;j++){
+
+                //if the char match run this if not run the esle
+                 if(s1[i-1]==s2[j-1]){
+                        dp[i][j] = 0 + dp[i-1][j-1];
+                 }
+                 else{
+                         int insert = 1 + dp[i][j-1];
+                int replace =1 +  dp[i-1][j-1];
+                int del  = 1 + dp[i-1][j];
+                dp[i][j] = min(insert,min(replace,del));
+                    
+                 }
+            
+            }
+        }
+        return dp[n1][n2];
     }
