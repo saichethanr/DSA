@@ -1,6 +1,10 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+
+//once after visiting a node and trying all the posible moves on that node we need to make vissited false and 
+//so that for the adjacent moves we would need this sum 
+
 class Solution {
 public:
     int solve(int i, int j, vector<vector<int>>& grid, vector<vector<bool>>& visited) {
