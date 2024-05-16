@@ -3,7 +3,7 @@ using namespace std;
 
 int solve(int idx,int w,vector<int> &val,vector<int> &wt){
     if(idx==0){
- 
+           //how many times wt[0] can only be considered to make profit*val
            return (int)(w/wt[0])*val[0];
 
     }
