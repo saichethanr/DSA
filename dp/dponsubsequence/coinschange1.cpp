@@ -10,6 +10,7 @@ using namespace std;
 
 //fewer number of cons that is needed to make that amount
  int solve(int idx,vector <int> &coins,int amount){
+//if there is x coin at index 0 and there is y amount no of coins = y/x
    if(idx==0){
     if(amount%coins[idx]==0){
         return amount/coins[idx];
