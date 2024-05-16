@@ -32,7 +32,7 @@ int solve_tabulation(int n,vector<vector<int>>& a,vector<vector<int>>& dp){
         dp[n-1][k] = a[n-1][k];
     }           
     //as computaion for n-1 is done start from n-2;
-    //
+    //we are comming from bottom to top  as the last row itself is the base case
     for(int i=n-2;i>=0;i--){
         for(int j=i;j>=0;j--){
             int down = a[i][j] + dp[i+1][j];
