@@ -1,6 +1,9 @@
 #include<bits/stdc++.h> 
 using namespace std;
 //handle the bounds i>0 and j>0
+// Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
+
+// Note: You can only move either down or right at any point in time.
     int solve(int i,int j,vector<vector<int>>&dp,vector<vector<int>>& a){
          if(i==0 && j==0){
             return a[0][0];
