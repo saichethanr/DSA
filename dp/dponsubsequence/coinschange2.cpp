@@ -12,6 +12,8 @@ using namespace std;
 
 
 //  simple recursion
+
+//because it a problem involving number of ways we have to add the result and return it
   int solve(int idx,int target,vector<int>& coins,vector<vector<int>> &dp){
         
         if(idx==0){
