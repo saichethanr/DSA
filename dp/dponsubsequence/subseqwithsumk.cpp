@@ -1,5 +1,10 @@
 #include <bits/stdc++.h> 
 using namespace std;
+
+// Given an array of non-negative integers, and a value sum, 
+// determine if there is a subset of the given set with sum equal to given sum. 
+
+
 bool subsum_rec(int idx,int target,vector<int> &arr){
     if(target==0){
         return true;
@@ -39,6 +44,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     for(int i=0;i<n;i++){
         dp[i][0] = true;
     }
+    //consider a single element and develop this base case
     dp[0][arr[0]]=true;
 
     for(int i=1;i<n;i++){
