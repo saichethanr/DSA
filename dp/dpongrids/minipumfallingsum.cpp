@@ -79,6 +79,9 @@ using namespace std;
             dp[i][j] = matrix[i][j] + min(up, min(ld, rd));
             }
         }
+
+        //answers are stored in the last row of the dp 
+        //the minimum of those answers have to be returned
         int mini = INT_MAX;
         for(int i=0;i<m;i++){
           mini = min(mini,dp[n-1][i]);
