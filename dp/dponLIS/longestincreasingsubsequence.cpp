@@ -46,3 +46,33 @@ using namespace std;
          dp[ind][prev+1] = max(notake,take);
          return dp[ind][prev+1];
     }
+    
+
+     int lengthOfLIS(vector<int>& nums) {
+
+        //for the memoization and recursion we have done bottom up but
+        //for the same in tabulation we have to to do top down 
+        //a reverse function for the both
+        int n = nums.size();
+        vector<vector<int>> dp(n+1,vector<int>(n+1,0));
+        
+    
+        //base case
+        for(int ind=n-1;ind>=0;ind--){
+            for(int prev = ind-1;prev>=-1;prev--){
+                   // if the element at current index is not taken  prev is not changed
+                    int notake = dp[ind+1][prev+1];
+                    int take = 0;
+
+                    // if the prev = -1 and the nums at ind is greater than nums at prev then it can be taken 
+                    // for increasing subsequence
+                    if(prev==-1 || nums[ind]>nums[prev]){
+                        take = 1 + dp[ind+1][ind+1];
+                    }
+                    
+                    //max has to be returened
+                    dp[ind][prev+1] = max(notake,take);
+            }
+        }
+        return dp[0][-1+1];
+    }
