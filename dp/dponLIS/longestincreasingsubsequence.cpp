@@ -76,3 +76,19 @@ using namespace std;
         }
         return dp[0][-1+1];
     }
+
+    //space optimized approach
+   int lengthOfLIS(vector<int>& nums) {
+         int n = nums.size();
+         vector<int>dp(n,1);
+         int maxi = INT_MIN;
+         for(int ind=0;ind<n;ind++){
+              for(int prev=0;prev<ind;prev++){
+                if(nums[prev]<nums[ind]){
+                    dp[ind] =  max(dp[ind],1 + dp[prev]);
+                }  
+              }
+              maxi = max(maxi,dp[ind]);
+         }
+         return maxi;
+    }
