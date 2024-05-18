@@ -21,6 +21,8 @@ using namespace std;
     }
 
         //memoization code
+        //as initially the prev ==-1 we cannot store that in the dp hence its 
+        //important to consider the coordinate change 
         int solve(int ind,int prev,vector<int>&nums, vector<vector<int>> &dp){
         //if the index goes out of bounds 
         if(ind==nums.size()){
