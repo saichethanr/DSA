@@ -19,3 +19,5 @@ int main(){
     cout<<flag<<endl;
     return 0;
 }
+
+//there is a lso another single pointer approach with a tiime complexity of n/2
