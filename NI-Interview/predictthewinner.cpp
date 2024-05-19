@@ -1,6 +1,9 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+
+//could have solved this before but i did not 
+//it hurts
 class Solution {
 public:
     int solve(vector<int>& nums,int i,int j,int chance){
