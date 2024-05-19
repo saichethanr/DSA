@@ -82,8 +82,8 @@ int count(int i,vector<int>nums,vector<int> t,int sum,int target){
 
 int main(){
     vector <int> t;
-    vector<int> nums = {1,2,1};
-    int target = 2;
-    int  ans = count(0,nums,t,0,target);
-    cout<<ans<<endl;
+    vector<int> nums = {2,3,5};
+    int target = 8;
+    solve(0,nums,t,0,target);
+   
 }
