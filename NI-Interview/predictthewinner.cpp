@@ -12,7 +12,7 @@ public:
         }
         else{
            return min(solve(nums,i+1,j,0),solve(nums,i,j-1,0));
-        }
+        }  
             
     }
     bool predictTheWinner(vector<int>& nums) {
