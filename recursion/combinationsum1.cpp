@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
     void solve(int i,vector<int>& nums,vector<int>t,int sum,int target, vector<vector<int>> &ans){
-          
+          //as u stay at the same indeex during the take case u will need to check for the sum overbound condition
           if(sum>target){
             return;
           }
@@ -14,15 +14,14 @@ public:
               if(sum==target){
                  ans.push_back(t);
               }
-              else{
-                 return;
-              }
+          
               return;
            }
 
 
            t.push_back(nums[i]);
            sum+=nums[i];
+           //as u can use the sam element multiple times you will have to stay at that particular index
            solve(i,nums,t,sum,target,ans);
 
            t.pop_back();
