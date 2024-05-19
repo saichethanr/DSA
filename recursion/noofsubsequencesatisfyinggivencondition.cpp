@@ -2,6 +2,10 @@
 #include <vector>
 using namespace std;
 
+//condition :  maxelement(subsequence) + min(subsequence) <= target
+
+//approach 1
+
 class Solution {
 public:
     void solve(int i,vector<int> nums,vector<int>t,vector<vector<int>> &ans){
