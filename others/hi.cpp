@@ -2,7 +2,16 @@
 using namespace std;
 
 int main(){
-int a  = 1||0;
-int t= 1==1;
-cout<<t<<endl;
+vector<pair<int,int>>v  = {{2,1},{5,7},{1,2}};
+
+for(int i=0;i<v.size();i++){
+    int t = v[i].first;
+    v[i].first = v[i].second;
+    v[i].second = t;
+}
+
+for(int i=0;i<v.size();i++){
+    
+}
+
 }
