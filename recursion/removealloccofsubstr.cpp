@@ -4,8 +4,6 @@
 
 
 
-class Solution {
-public:
     void removesubstr(string &s,string &part){
         int found = s.find(part);
         //O(nm);    
@@ -20,8 +18,10 @@ public:
             return;
         }
     }
+
+
     string removeOccurrences(string s, string part) {
         removesubstr(s,part);
         return s;
     }
-};
+
