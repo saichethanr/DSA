@@ -5,14 +5,15 @@ void subarray(vector<int> &t,int s,int e){
         return;
     
 }  
-    if (s > e) {
+    if(s > e) {
         cout << endl;
         subarray(t, 0, e + 1);
     } 
-    else {
+    else{
         for (int i = s; i <= e; i++) {
             cout << t[i] << " ";
         }
+       
         cout << endl;
         subarray(t, s + 1, e);
     }
