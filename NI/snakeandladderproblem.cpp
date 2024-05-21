@@ -5,3 +5,6 @@
 // values denote the starting and ending point respectively of ith snake or ladder. 
 // The board looks like the following.
 // Note: Assume that you have complete control over the 6 sided dice. No ladder starts from 1st cell.
+
+
+
