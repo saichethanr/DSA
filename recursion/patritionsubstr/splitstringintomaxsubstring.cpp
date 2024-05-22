@@ -1,5 +1,8 @@
 #include<bits/stdc++.h> 
 #include <string>
+using namespace std;
+
+
 
 //76 cases passed
 class Solution {
