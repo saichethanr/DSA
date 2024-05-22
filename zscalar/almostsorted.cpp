@@ -1,6 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std;
-
+//Question : no of deletions to make the array almost sorted ie there will be only one element whiichh is unordered
+//find the no of deletions
 //brute force approach
 void mindeletionstomakealmostsorted(vector<int> v){
     int cnt=0;

@@ -1,7 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
-//Question : no of deletions to make the array almost sorted
 
 int longestCommonPrefix(const string &str1, const string &str2) {
     int minLength = min(str1.size(), str2.size());
