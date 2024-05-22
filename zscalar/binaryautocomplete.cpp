@@ -1,31 +1,29 @@
-#include<bits/stdc++.h> 
+#include <bits/stdc++.h>
 using namespace std;
 
+vector<int> solve(vector<string> vec) {
+    map<pair<int, int>, int> um;
+    vector<int> res;
 
-int longestCommonPrefix(const string &str1, const string &str2) {
-    int minLength = min(str1.size(), str2.size());
-    int i = 0;
-    
-    
-    while (i < minLength && str1[i] == str2[i]) {
-        i++;
+    for (int i = 0; i < vec.size(); i++) {
+        int a = 0;
+        int index = i;
+        for (int j = 0; j < vec[i].length(); j++) {
+            a = a * 2 + vec[i][j] - '0';
+            if (um.find({a, j + 1}) != um.end())
+                index = um[{a, j + 1}] + 1;
+            um[{a, j + 1}] = i;
+        }
+        res.push_back(index);
     }
-
-    return i;
+    
+    return res;
 }
-vector<int> solve(vector<string> v){
-    unordered_map<string,int>mpp;
-    for(int i=0;i<v.size();i++){
-        mpp[v[i]]=i;
-    }
-    int n= v.size();
-    vector<int> ans(n,0);
-    
-    for(int i=1;i<v.size();i++){
-          for(int j=i-1;j>=0;j--){
-              int len = longestCommonPrefix(v[j],v[i]);
 
-          }
-    }
-    return ans;
+int main() {
+    vector<string> vec = {"000", "1110", "01", "001", "110", "11"};
+    vector<int> res = solve(vec);
+    for (auto i : res)
+        cout << i << " ";
+    cout << endl;
 }
