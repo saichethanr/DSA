@@ -8,7 +8,7 @@ using namespace std;
 //  Two subsets are different if and only if the chosen indices to delete are different.
 
 
-
+//very naive and brute force approach
 class Solution {
 public:
     int solve(int ind,vector<int> &nums,int k,vector<int> &t){
