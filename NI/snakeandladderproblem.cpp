@@ -8,3 +8,83 @@
 
 
 
+//{ Driver Code Starts
+// Initial Template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+// User function Template for C++
+
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_map>
+using namespace std;
+
+class Solution {
+public:
+    pair<int,int> findcor(int dice){
+        int r = 5-1-(dice-1)/5;
+        int c = (dice-1)%6;
+        if(r%2==5%2){
+            return {r,6-1-c};
+        }
+        else{
+            return {r,c};
+        }
+    }
+
+    unordered_map<int,int> mapit(int N, int arr[]){
+        unordered_map<int,int> mpp;
+        for(int i = 0; i < 2 * N; i += 2){
+            mpp[arr[i]] = arr[i + 1];
+        }
+        return mpp;
+    }
+
+    int minThrow(int N, int arr[]){
+        vector<vector<bool>> vis(5, vector<bool>(6, false));
+        queue<int> q;
+        vis[4][0] = true;
+        q.push(1);
+        int minsteps = 0;
+        while(!q.empty()){
+            int size = q.size();
+            for(int j = 0; j < size; j++){
+                int cur = q.front();
+                q.pop();
+                if(cur == 30){
+                    return minsteps;
+                }
+                for(int k = 1; k <= 6; k++){
+                    int next = cur + k;
+                    if(next > 30){
+                        break;
+                    }
+                    
+                    pair<int,int> p = findcor(next);
+                    int x = p.first;
+                    int y = p.second;
+                    if(x>=0 && y >=0 && vis[x][y]){
+                        continue;
+                    }
+                    if(x >= 0 && x < 5 && y >= 0 && y < 6 && !vis[x][y]){
+                        vis[x][y] = true;
+                        unordered_map<int,int> mpp = mapit(N, arr);
+                        if(mpp.find(next) != mpp.end()){
+                            q.push(mpp[next]);
+                        }
+                        else{
+                            q.push(next);
+                        }
+                    }
+                }
+            }
+            minsteps++;
+        }
+        return minsteps; // If destination is not reachable
+    }
+};
+
