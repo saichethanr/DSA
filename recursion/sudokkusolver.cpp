@@ -5,6 +5,8 @@ using namespace std;
 
 class Solution {
 public:
+    //for each empty cell test for all the posible character that cvan be applied to that cell if we can then we will aplly it 
+    // and solve the new board obtained
     bool solve(vector<vector<char>>&board){
         for(int i=0;i<board.size();i++){
             for(int j=0;j<board[i].size();j++){
