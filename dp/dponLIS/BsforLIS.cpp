@@ -1,6 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+//using the lower bound approach needs revisiion
 int solve(vector<int> nums){
         int n = nums.size();
         vector<int> temp;
