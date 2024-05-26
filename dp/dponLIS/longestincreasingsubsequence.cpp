@@ -83,6 +83,10 @@ using namespace std;
          vector<int>dp(n,1);
          int maxi = INT_MIN;
          for(int ind=0;ind<n;ind++){
+            //check for all the prev indexes and if its possible for them to be accomodated inside LIS
+            //then add 1 to their dp andupdate the dp of the currnt element if its greater than the prev dp value of the same element
+            //the min length for alll the vlaues in the array will be 1 
+            //hence initaialize the dp table to 1
               for(int prev=0;prev<ind;prev++){
                 if(nums[prev]<nums[ind]){
                     dp[ind] =  max(dp[ind],1 + dp[prev]);
