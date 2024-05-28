@@ -42,6 +42,7 @@ public:
 //memoization approach
 class Solution {
 public:
+//tc N*2
     int f(int ind,int buy,vector<int>& prices,vector<vector<int>> &dp) {
         if(ind==prices.size()){
             return 0;
@@ -77,3 +78,35 @@ public:
 //memoization is the dpiation of the code we have 
 //we need to tablulate now 
 
+class Solution {
+
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+        vector<vector<int>>dp(n+1,vector<int>(2,-1));
+        //base cases    
+        dp[n][1]=0;
+        dp[n][0] =0;
+
+        for(int ind = n-1;ind>=0;ind--){
+           for(int buy=0;buy<=1;buy++){
+                        int profit=0;
+                      
+                        if(buy){
+                            //if u can buy u should loose amount 
+                            //its a simple case of buy and not buy 
+                        profit = max(-prices[ind]+dp[ind+1][0],dp[ind+1][1]);
+                        
+
+                        }
+                        else{
+                            //if u sell u can gain amount
+                            //its a simple case of buy or not buy
+                            profit = max(prices[ind]+dp[ind+1][1],dp[ind+1][0]);
+                        }
+
+                        dp[ind][buy] = profit;
+           }
+        }
+        return dp[0][1];
+    }
+};
