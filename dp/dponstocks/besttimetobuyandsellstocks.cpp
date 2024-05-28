@@ -4,6 +4,8 @@ using namespace std;
 
 //we just have to find the maximum diffrence between any two elements such that the minimum element is at the begining 
 //and the greater element is after the minimum element
+
+//in here its buy once and sell once
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
