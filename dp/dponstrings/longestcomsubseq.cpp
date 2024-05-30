@@ -62,3 +62,32 @@ using namespace std;
         return dp[n1][n2];
         
     }
+
+
+
+    //also a recursive approach
+    class Solution {
+  public:
+  int mod = 1e9+7;
+    int solve(int ind,string s1,string s2,string &t){
+        if(ind==s1.size()){
+            if(t==s2){
+                return 1;
+            }
+            return 0;
+        }
+        
+        t+=s1[ind];
+        int take = solve(ind+1,s1,s2,t);
+        t.pop_back();
+        
+        int notake = solve(ind+1,s1,s2,t);
+        
+        return take+notake;
+    }
+    int countWays(string s1, string s2) {
+        string t = "";
+        int ans = solve(0,s1,s2,t);
+        return ans%mod;
+    }
+};
