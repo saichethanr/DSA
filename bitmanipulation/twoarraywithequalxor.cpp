@@ -1,6 +1,8 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+
+//not the best approach but still solved it 
 class Solution {
 public:
     int countTriplets(vector<int>& arr) {
