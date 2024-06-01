@@ -14,7 +14,6 @@ void selectionsort(vector<int>&arr){
          swap(arr[i],arr[mini]);
    }
 
-
 }
 int main(){
     vector<int> arr = {1,6,4,2,3,9,5};
