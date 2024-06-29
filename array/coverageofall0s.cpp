@@ -11,6 +11,7 @@ class Solution {
                         if(matrix[i-1][j]==1){
                             sum++;
                         }
+                        //niceeee
                     }
                     if(i+1<matrix.size()){
                         if(matrix[i+1][j]==1){
