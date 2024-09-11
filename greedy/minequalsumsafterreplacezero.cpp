@@ -1,7 +1,6 @@
 #include<bits/stdc++.h> 
 #include <vector>
 using namespace std;
-
 class Solution {
 public:
     long long minSum(vector<int>& nums1, vector<int>& nums2) {
@@ -39,8 +38,8 @@ public:
            ans = sum1 + z1;
         }
         else if(sum1==sum2){
-            int minz = min(z1,z2);
-            ans = sum1 +  minz;
+           
+            ans = sum1 + z1 + z2;
         }
         
 
