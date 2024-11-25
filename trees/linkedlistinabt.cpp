@@ -57,3 +57,29 @@ public:
 
 
 
+//one of the best question
+class Solution {
+public:
+    bool solve(TreeNode* root, ListNode *temp) {
+        // If linked list is fully traversed, return true
+        if (temp == nullptr) {
+            return true;
+        }
+        // If binary tree is fully traversed or doesn't match linked list value, return false
+        if (root == nullptr || root->val != temp->val) {
+            return false;
+        }
+        // Recursively check both left and right subtree for matching path
+        return solve(root->left, temp->next) || solve(root->right, temp->next);
+    }
+
+    bool isSubPath(ListNode* head, TreeNode* root) {
+        // If the binary tree is fully traversed, return false (no path found)
+        if (root == nullptr) {
+            return false;
+        }
+        // Check if the current node in the binary tree is the start of a matching path
+        // or continue searching in the left and right subtrees
+        return solve(root, head) || isSubPath(head, root->left) || isSubPath(head, root->right);
+    }
+};
