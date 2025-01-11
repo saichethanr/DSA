@@ -22,4 +22,4 @@ string reversePrefix(string word, char ch) {
         }
         cout<<word<<endl;
         return word;
-    }
+}
