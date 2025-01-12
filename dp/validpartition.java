@@ -5,7 +5,9 @@ public class validpartition {
         
     }
     public boolean validPartition(int[] nums) {
-        
+        for(int i=0;i<nums.length;i++){
+            
+        }
     }
 
     public boolean solve(int [] nums,int i){
