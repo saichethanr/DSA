@@ -223,6 +223,11 @@
   },
   "active": "3c552d290ab12730",
   "lastOpenFiles": [
+    "graphs/graphcreate.java",
+    "graphs/AdjacencyListGraphMap.java",
+    "graphs/AdjacencyMatrixGraph.java",
+    "Pasted image 20250525162629.png",
+    "Pasted image 20250525162559.png",
     "Pasted image 20250525161152.png",
     "Pasted image 20250525160801.png",
     "Pasted image 20250525160448.png",
@@ -234,9 +239,6 @@
     "Untitled.md",
     "Untitled 1.md",
     "graphs/graph-notes/Graph notes.md",
-    "graphs/graph-notes",
-    "Leetcode-2024/Screenshot from 2025-01-05 10-14-55.png",
-    "Leetcode-2024/Screenshot from 2025-01-05 10-15-56.png",
-    "Leetcode-2024/Screenshot from 2025-01-05 10-13-58.png"
+    "graphs/graph-notes"
   ]
 }

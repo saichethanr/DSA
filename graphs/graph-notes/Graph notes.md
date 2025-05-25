@@ -47,3 +47,22 @@ Hamiltonian Graph
 "If in a graph you are able to make a round where u start from a node and you are able to reach back to the node after making a round and visiting all other nodes exactly once then such type of a graph is known as Hamiltonian graph. And Such a cycle is called as Hamiltonian cycle"
 ![[Pasted image 20250525161152.png]]
 
+
+
+Graph Implementation
+1. Adjacency Matrix
+2. Adjacency LIst
+
+![[Pasted image 20250525162559.png]]
+![[Pasted image 20250525162629.png]]
+
+
+Adjancency List
+
+A Node -> list of all the nodes it is connected to 
+
+This is mostly represented in a Map
+Map<Node,List<Integer>> graph
+
+key -> node
+value -> list of connections
